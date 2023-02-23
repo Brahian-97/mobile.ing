@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #160B34;
+}
+
+h1,h2,h3,p{
+    color: white;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+/*MOBILE FIRST*/
+
+#grid_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-template-rows: ;*/
+    grid-template-areas: 
+        "header"
+        "main"
+        "section"
+        "footer";
+}
+
+header{
+    grid-area: header;
+    height: 80vh;
+}
+
+nav{
+    background-color: #6E7398;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100px;
+    margin-left: 2px;
+}
+
+p{
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+li{
+   list-style: none; 
+}
+
+li a{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.div_container{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 80%;
+    background-image: url(http://www.sirenaselectronicas.com/wp-content/uploads/sites/7/2020/05/titulka02.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/*MAIN*/
+
+main{
+    grid-area: main;
+    height: 50vh;
+}
+
+#grid_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.container_main h2{
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+}
+
+.container_main p{
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.img_container_main{
+    justify-self: center;
+    align-self: center;
+    width: 170px;
+    height: 170px;
+}
+
+.violet, h3{
+    color: #9340ff;
+}
+
+/*SECTION*/
+
+section{
+    grid-area: section;
+}
+
+#grid_section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*FOOTER*/
+
+footer{
+    grid-area: footer;
+}
+
+#grid_footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "mapa redes"
+        "mapa redes"
+        "derechos derechos";
+}
+
+.d_play{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/*.logo_container_footer{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-left: 20px;
+}*/
+
+iframe{
+    width: 100px;
+    height: 100px;
+    grid-area: mapa;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.logos_finales{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.piso{
+    background-color: #989387;
+    height: 5vh;
+    text-align: right;
+    grid-area: derechos;
+}
+
+/*TABLET*/
+
+@media screen and (min-width: 768px) {
+    #grid_container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "section section section"
+        "footer footer footer";
+
+    }
+
+    .div_container{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        height: 90%;
+        background-image: url(http://www.sirenaselectronicas.com/wp-content/uploads/sites/7/2020/05/titulka02.jpg);
+        background-size: contain;
+        background-repeat: space;
+    }
+    
+
+}
+
+/*DESKTOP*/
+
+@media screen and (min-width: 1200px) {
+    #grid_container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "section"
+        "footer";
+
+    }
+
+    .div_container{
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        height: 100%;
+        background-image: url("http://www.sirenaselectronicas.com/wp-content/uploads/sites/7/2020/05/titulka02.jpg");
+    }
+
+    /*NAV DESKTOP*/
+    .logo_container{
+        width: 175px;
+        height: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    nav p{
+        font-size: 2rem;
+        margin-left: 5px;
+    }
+
+    .caja1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .caja1 a{
+        background-color: white;
+        margin-right: 10px;
+        font-size: 2.2rem;
+        text-decoration: none;
+    }
+    
+    /*MAIN DESKTOP*/
+    main{
+        grid-area: main;
+        height: 100vh;
+    }
+
+    .container_main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .container_main h2{
+        font-size: 4rem;
+        margin-bottom: 0px;
+    }
+    
+    .container_main p{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .img_container_main{
+        justify-self: center;
+        align-self: center;
+        width: 623px;
+        height: 430px;
+    }
+
+    /*SECTION DESKTOP*/
+
+    #grid_section{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .d_play_article{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .div_section{
+        text-align: center;
+        align-items: center;
+        width: 500px;
+    }
+
+    section h3{
+        font-size: 3rem;
+    }
+
+    section p{
+        width: 450px;
+        font-size: 2rem;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .img_container{
+        width: 450px;
+        height: 300px;
+    }
+
+    .img_container img{
+        border-radius: 10px;
+    }
+    
+    .img_container_sm{
+        width: 450px;
+        height: 400px;
+    }
+
+    /*FOOTER*/
+
+    iframe{
+        width: 100px;
+        height: 100px;
+        grid-area: mapa;
+        justify-self: center;
+        align-self: center;
+        
+    }
+
+}
