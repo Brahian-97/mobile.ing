@@ -11,7 +11,7 @@ body{
     background-color: #160B34;
 }
 
-h1,h2,h3,p{
+h1,h2,h3,p,li{
     color: white;
 }
 
@@ -22,7 +22,7 @@ img{
 
 /*MOBILE FIRST*/
 
-#grid_container{
+#grid_container_index{
     display: grid;
     grid-template-columns: 1fr;
     /*grid-template-rows: ;*/
@@ -35,7 +35,6 @@ img{
 
 header{
     grid-area: header;
-    height: 80vh;
 }
 
 nav{
@@ -51,6 +50,10 @@ nav{
     align-items: center;
     width: 100px;
     margin-left: 2px;
+}
+
+h1{
+    font-size: 2rem;
 }
 
 p{
@@ -95,7 +98,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: left;
+    text-align: center;
 }
 
 .container_main h2{
@@ -152,15 +155,9 @@ footer{
     height: 100%;
 }
 
-/*.logo_container_footer{
-    width: 250px;
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-    margin-left: 20px;
-}*/
+.letra_footer{
+    font-size: 1.5rem;
+}
 
 iframe{
     width: 100px;
@@ -168,7 +165,7 @@ iframe{
     grid-area: mapa;
     justify-self: center;
     align-self: center;
-    
+    margin-bottom: 2px;   
 }
 
 .logos_finales{
@@ -184,10 +181,62 @@ iframe{
     grid-area: derechos;
 }
 
+/*CONTACTO*/
+
+#grid_container_index{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#grid_section_contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    height: 500px;
+}
+
+.section_contacto{
+    width: 500px;
+    height: 500px;
+}
+
+.logo2{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+.titulo_contacto{
+    font-size: 3rem;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.titulo_contacto_li{
+    font-size: 2rem;
+    margin-left: 10px;
+}
+
+.contacto{
+    width: 150px;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0px;
+}
+
+.d_play{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+
 /*TABLET*/
 
 @media screen and (min-width: 768px) {
-    #grid_container{
+    #grid_container_index{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
         "header header header"
@@ -195,6 +244,13 @@ iframe{
         "section section section"
         "footer footer footer";
 
+    }
+
+    .img_container_main{
+        justify-self: center;
+        align-self: center;
+        width: 250px;
+        height: 250px;
     }
 
     .div_container{
@@ -207,13 +263,21 @@ iframe{
         background-repeat: space;
     }
     
+    iframe{
+        width: 250px;
+        height: 150px;
+        grid-area: mapa;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 10px;   
+    }
 
 }
 
 /*DESKTOP*/
 
 @media screen and (min-width: 1200px) {
-    #grid_container{
+    #grid_container_index{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header"
@@ -229,6 +293,7 @@ iframe{
         justify-content: space-evenly;
         height: 100%;
         background-image: url("http://www.sirenaselectronicas.com/wp-content/uploads/sites/7/2020/05/titulka02.jpg");
+        background-size: auto;
     }
 
     /*NAV DESKTOP*/
@@ -239,7 +304,7 @@ iframe{
         justify-content: flex-start;
         align-items: center;
         padding: 10px;
-        margin-left: 25px;
+        margin-left: 20px;
     }
 
     nav p{
@@ -259,7 +324,10 @@ iframe{
         font-size: 2.2rem;
         text-decoration: none;
     }
-    
+    /*HEADER*/
+    h1{
+        font-size: 4rem;
+    }
     /*MAIN DESKTOP*/
     main{
         grid-area: main;
@@ -269,7 +337,7 @@ iframe{
     .container_main{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
     }
     
@@ -338,12 +406,60 @@ iframe{
     /*FOOTER*/
 
     iframe{
-        width: 100px;
-        height: 100px;
+        width: 300px;
+        height: 200px;
         grid-area: mapa;
         justify-self: center;
         align-self: center;
+        margin-bottom: 10px;
         
     }
 
+    /*CONTACTO*/
+
+    #grid_section_contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+        height: 300px;
+    }
+
+    .section_contacto{
+        width: 500px;
+        height: 500px;
+    }
+
+    .logo2{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+    }
+    
+    .titulo_contacto{
+        font-size: 3rem;
+        text-decoration: underline;
+        padding: 10px;
+    }
+
+    .titulo_contacto_li{
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+    
+    .contacto{
+        width: 150px;
+        font-size: 4rem;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .d_play{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+    }
+
 }
+
