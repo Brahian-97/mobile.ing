@@ -232,6 +232,11 @@ iframe{
     height: 100%;
 }
 
+/*HIDRAULICA*/
+#grid_container_hid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 /*TABLET*/
 
